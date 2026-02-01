@@ -1,0 +1,15 @@
+{
+  "UniqueName": "Vintage.Evil_Riggs",
+  "Version": "0.2.0",
+  "Author": "Vintage",
+  "Description": "A mod which adds Riggs? as a playable character.",
+  "RequiredApiVersion": "1.5.7",
+  "EntryPointAssembly": "Evil_Riggs.dll",
+  "LoadPhase": "AfterDbInit",
+  "Dependencies": [
+    {
+      "UniqueName": "Shockah.Kokoro",
+      "Version": "1.12.1"
+    }
+  ]
+}

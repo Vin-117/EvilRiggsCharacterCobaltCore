@@ -1,0 +1,9 @@
+C:\Users\conce\Desktop\Cobalt Core Mods\Mine\demomod-master\bin\Release\net8.0\DemoMod.dll.config
+C:\Users\conce\Desktop\Cobalt Core Mods\Mine\demomod-master\bin\Release\net8.0\DemoMod.deps.json
+C:\Users\conce\Desktop\Cobalt Core Mods\Mine\demomod-master\bin\Release\net8.0\DemoMod.dll
+C:\Users\conce\Desktop\Cobalt Core Mods\Mine\demomod-master\obj\Release\net8.0\DemoMod.csproj.AssemblyReference.cache
+C:\Users\conce\Desktop\Cobalt Core Mods\Mine\demomod-master\obj\Release\net8.0\DemoMod.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\conce\Desktop\Cobalt Core Mods\Mine\demomod-master\obj\Release\net8.0\DemoMod.AssemblyInfoInputs.cache
+C:\Users\conce\Desktop\Cobalt Core Mods\Mine\demomod-master\obj\Release\net8.0\DemoMod.AssemblyInfo.cs
+C:\Users\conce\Desktop\Cobalt Core Mods\Mine\demomod-master\obj\Release\net8.0\DemoMod.csproj.CoreCompileInputs.cache
+C:\Users\conce\Desktop\Cobalt Core Mods\Mine\demomod-master\obj\Release\net8.0\DemoMod.dll

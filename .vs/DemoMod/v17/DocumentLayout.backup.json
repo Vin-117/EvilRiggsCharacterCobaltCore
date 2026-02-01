@@ -1,0 +1,104 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\conce\\Desktop\\Cobalt Core Mods\\Mine\\demomod-master\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A49784E5-B4E7-4CFA-B21C-AB30802B90DE}|DemoMod.csproj|c:\\users\\conce\\desktop\\cobalt core mods\\mine\\demomod-master\\nickel.json||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A49784E5-B4E7-4CFA-B21C-AB30802B90DE}|DemoMod.csproj|solutionrelative:nickel.json||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A49784E5-B4E7-4CFA-B21C-AB30802B90DE}|DemoMod.csproj|c:\\users\\conce\\desktop\\cobalt core mods\\mine\\demomod-master\\modentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A49784E5-B4E7-4CFA-B21C-AB30802B90DE}|DemoMod.csproj|solutionrelative:modentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A49784E5-B4E7-4CFA-B21C-AB30802B90DE}|DemoMod.csproj|c:\\users\\conce\\desktop\\cobalt core mods\\mine\\demomod-master\\iregisterable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A49784E5-B4E7-4CFA-B21C-AB30802B90DE}|DemoMod.csproj|solutionrelative:iregisterable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A49784E5-B4E7-4CFA-B21C-AB30802B90DE}|DemoMod.csproj|c:\\users\\conce\\desktop\\cobalt core mods\\mine\\demomod-master\\gameenums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A49784E5-B4E7-4CFA-B21C-AB30802B90DE}|DemoMod.csproj|solutionrelative:gameenums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IRegisterable.cs",
+              "DocumentMoniker": "C:\\Users\\conce\\Desktop\\Cobalt Core Mods\\Mine\\demomod-master\\IRegisterable.cs",
+              "RelativeDocumentMoniker": "IRegisterable.cs",
+              "ToolTip": "C:\\Users\\conce\\Desktop\\Cobalt Core Mods\\Mine\\demomod-master\\IRegisterable.cs",
+              "RelativeToolTip": "IRegisterable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-01T21:17:09.79Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GameEnums.cs",
+              "DocumentMoniker": "C:\\Users\\conce\\Desktop\\Cobalt Core Mods\\Mine\\demomod-master\\GameEnums.cs",
+              "RelativeDocumentMoniker": "GameEnums.cs",
+              "ToolTip": "C:\\Users\\conce\\Desktop\\Cobalt Core Mods\\Mine\\demomod-master\\GameEnums.cs",
+              "RelativeToolTip": "GameEnums.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-01T21:17:08.085Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ModEntry.cs",
+              "DocumentMoniker": "C:\\Users\\conce\\Desktop\\Cobalt Core Mods\\Mine\\demomod-master\\ModEntry.cs",
+              "RelativeDocumentMoniker": "ModEntry.cs",
+              "ToolTip": "C:\\Users\\conce\\Desktop\\Cobalt Core Mods\\Mine\\demomod-master\\ModEntry.cs",
+              "RelativeToolTip": "ModEntry.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-01T21:10:16.297Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "nickel.json",
+              "DocumentMoniker": "C:\\Users\\conce\\Desktop\\Cobalt Core Mods\\Mine\\demomod-master\\nickel.json",
+              "RelativeDocumentMoniker": "nickel.json",
+              "ToolTip": "C:\\Users\\conce\\Desktop\\Cobalt Core Mods\\Mine\\demomod-master\\nickel.json",
+              "RelativeToolTip": "nickel.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-02-01T20:45:23.778Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

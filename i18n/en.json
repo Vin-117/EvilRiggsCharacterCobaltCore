@@ -1,0 +1,59 @@
+﻿{
+    "character": {
+        "name": "Riggs?",
+        "desc": ["<c=riggs>RIGGS?</c>", "Your pilot? Her cards are mostly <c=boldPink>card draw</c> and <c=boldPink>chaotic movement</c>, alongside <c=boldPink>missiles</c> and <c=boldPink>sequential actions</c>."], 
+    },
+    "status": {
+        "knowledge": {
+            "name": "Knowledge",
+            "desc": "Base limit of 3. When reaching the limit, spend the required <c=status>KNOWLEDGE</c> to gain 1 <c=status>POWERDRIVE</c> and 1 <c=status>LESSON</c>. Excess <c=status>KNOWLEDGE</c> is not lost."
+        },
+        "lesson": {
+            "name": "Lesson",
+            "desc": "Increase the limit of <c=status>KNOWLEDGE</c> by {0}."
+        }
+    },
+    "action": {
+        "AGainPonder": {
+            "title": "Gain Ponder",
+            "draw": "Add <c=boldPink>{{Count}}</c> <c=card>Ponder</c>s to your <c=white>draw pile</c>.",
+            "discard": "Add <c=boldPink>{{Count}}</c> <c=card>Ponder</c>s to your <c=white>discard pile</c>."
+        },
+        "AOverthink": {
+            "title": "Overthink",
+            "desc": "Discard a <c=card>Ponder</c> in hand, or in the draw pile."
+        }
+    },
+    "card": {
+        "LessonPlan": {
+            "name": "Lesson Plan"
+        },
+        "PatternBlock": {
+            "name": "Pattern Block"
+        },
+        
+        "DeepStudy": {
+            "name": "Deep Study"
+        },
+        
+        "ExtractKnowledge": {
+            "name": "Extract Knowledge",
+            "desc": "<c=attack>Attack {0}</c>. If it kills, gain a <c=cardtrait>non-temp</c> <c=card>Ponder</c>.",
+            "descB": "<c=attack>Attack {0}</c>. If it kills, gain a <c=cardtrait>non-temp</c> <c=card>Ponder B</c>."
+        },
+        
+        "Ponder": {
+            "name": "Ponder"
+        }
+    },
+    "artifact": {
+        "BuriedKnowledge": {
+            "name": "BURIED KNOWLEDGE",
+            "desc": "At the start of combat, add 3 <c=card>Ponder</c>s to the discard pile."
+        },
+        "Lexicon": {
+            "name": "LEXICON",
+            "desc": "Whenever you gain a <c=card>Ponder</c> during combat, it is given the A or B upgrade, alternating."
+        }
+    }
+}

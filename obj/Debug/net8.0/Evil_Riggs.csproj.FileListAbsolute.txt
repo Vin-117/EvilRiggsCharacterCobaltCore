@@ -1,0 +1,9 @@
+C:\Users\conce\Desktop\Cobalt Core Mods\Mine\Evil_Riggs\bin\Debug\net8.0\Evil_Riggs.dll.config
+C:\Users\conce\Desktop\Cobalt Core Mods\Mine\Evil_Riggs\bin\Debug\net8.0\Evil_Riggs.deps.json
+C:\Users\conce\Desktop\Cobalt Core Mods\Mine\Evil_Riggs\bin\Debug\net8.0\Evil_Riggs.dll
+C:\Users\conce\Desktop\Cobalt Core Mods\Mine\Evil_Riggs\obj\Debug\net8.0\Evil_Riggs.csproj.AssemblyReference.cache
+C:\Users\conce\Desktop\Cobalt Core Mods\Mine\Evil_Riggs\obj\Debug\net8.0\Evil_Riggs.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\conce\Desktop\Cobalt Core Mods\Mine\Evil_Riggs\obj\Debug\net8.0\Evil_Riggs.AssemblyInfoInputs.cache
+C:\Users\conce\Desktop\Cobalt Core Mods\Mine\Evil_Riggs\obj\Debug\net8.0\Evil_Riggs.AssemblyInfo.cs
+C:\Users\conce\Desktop\Cobalt Core Mods\Mine\Evil_Riggs\obj\Debug\net8.0\Evil_Riggs.csproj.CoreCompileInputs.cache
+C:\Users\conce\Desktop\Cobalt Core Mods\Mine\Evil_Riggs\obj\Debug\net8.0\Evil_Riggs.dll
