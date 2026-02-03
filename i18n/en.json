@@ -28,8 +28,8 @@
         "LessonPlan": {
             "name": "Lesson Plan"
         },
-        "PatternBlock": {
-            "name": "Pattern Block"
+        "LightMissile": {
+            "name": "Light Missile"
         },
         
         "DeepStudy": {
@@ -54,6 +54,14 @@
         "Lexicon": {
             "name": "LEXICON",
             "desc": "Whenever you gain a <c=card>Ponder</c> during combat, it is given the A or B upgrade, alternating."
+        }
+    },
+    "midrow": {
+        "LightMissile": {
+            "Normal": {
+                "name": "Light Missile",
+                "description": "This missile is going to deal <c=damage>1</c> DMG."
+            }
         }
     }
 }

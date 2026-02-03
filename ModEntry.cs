@@ -7,22 +7,30 @@ using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
 using Evil_Riggs.External;
+using Evil_Riggs.Cards;
+using Evil_Riggs.Midrow;
 
 namespace Evil_Riggs;
 
 internal class ModEntry : SimpleMod
 {
+
+    //Setup modentry, harmony, and kokoro instances
     internal static ModEntry Instance { get; private set; } = null!;
     internal Harmony Harmony;
     internal IKokoroApi.IV2 KokoroApi;
-    internal IDeckEntry Evil_RiggsDeck;
+
+    //Setup localization
     internal ILocalizationProvider<IReadOnlyList<string>> AnyLocalizations { get; }
     internal ILocaleBoundNonNullLocalizationProvider<IReadOnlyList<string>> Localizations { get; }
+
+    //Register deck
+    internal IDeckEntry Evil_RiggsDeck;
 
     // Register cards
     private static List<Type> Evil_RiggsCommonCardTypes =
     [
-        
+        typeof(LightMissileCard)
     ];
     private static List<Type> Evil_RiggsUncommonCardTypes =
     [
@@ -56,12 +64,17 @@ internal class ModEntry : SimpleMod
         Evil_RiggsCardTypes
             .Concat(Evil_RiggsArtifactTypes);
 
+    //Register sprite variables
+    internal ISpriteEntry LightMissileMidrowIcon { get; }
+    internal ISpriteEntry LightMissileActionIcon { get; }
+
+
     //Setup modentry
     public ModEntry(IPluginPackage<IModManifest> package, IModHelper helper, ILogger logger) : base(package, helper, logger)
     {
+
         Instance = this;
         Harmony = new Harmony("Vintage.Evil_Riggs");
-        
         
         //Register Kokoro
         KokoroApi = helper.ModRegistry.GetApi<IKokoroApi>("Shockah.Kokoro")!.V2;
@@ -75,17 +88,18 @@ internal class ModEntry : SimpleMod
             new CurrentLocaleOrEnglishLocalizationProvider<IReadOnlyList<string>>(AnyLocalizations)
         );
 
-        //Register deck
+        //Define all custom sprites
+        LightMissileMidrowIcon = helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/midrow/missile_mini.png"));
+        LightMissileActionIcon = helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/midrow/icon_missile_light.png"));
+
+        //Define deck
         Evil_RiggsDeck = helper.Content.Decks.RegisterDeck("Evil_Riggs", new DeckConfiguration
         {
             Definition = new DeckDef
             {
-                
                 color = new Color("ff9c5f"),
-
                 titleColor = new Color("000000")
             },
-
             DefaultCardArt = StableSpr.cards_colorless,
             BorderSprite = RegisterSprite(package, "assets/Card/evilRiggs_cardframe.png").Sprite,
             Name = AnyLocalizations.Bind(["character", "name"]).Localize
@@ -95,7 +109,6 @@ internal class ModEntry : SimpleMod
         foreach (var type in AllRegisterableTypes)
             AccessTools.DeclaredMethod(type, nameof(IRegisterable.Register))?.Invoke(null, [package, helper]);
         
-
         //Register animations
         RegisterAnimation(package, "neutral", "assets/Animation/Neutral/evilRiggsNeutral", 5);
         RegisterAnimation(package, "squint", "assets/Animation/Squint/evilRiggsSquint", 5);
@@ -115,7 +128,6 @@ internal class ModEntry : SimpleMod
                 RegisterSprite(package, "assets/evilRiggsMini.png").Sprite,
             ]
         });
-
         helper.Content.Characters.V2.RegisterPlayableCharacter("Evil_Riggs", new PlayableCharacterConfigurationV2
         {
             Deck = Evil_RiggsDeck.Deck,
@@ -124,62 +136,20 @@ internal class ModEntry : SimpleMod
             {
                 cards = 
                 [
+                    new LightMissileCard()
                 ],
             },
             Description = AnyLocalizations.Bind(["character", "desc"]).Localize
         });
-
-        
-        /*KnowledgeStatus = helper.Content.Statuses.RegisterStatus("Knowledge", new StatusConfiguration
-        {
-            Definition = new StatusDef
-            {
-                isGood = true,
-                affectedByTimestop = false,
-                color = new Color("fbb954"),
-                icon = RegisterSprite(package, "assets/knowledge.png").Sprite
-            },
-            Name = AnyLocalizations.Bind(["status", "knowledge", "name"]).Localize,
-            Description = AnyLocalizations.Bind(["status", "knowledge", "desc"]).Localize
-        });
-        LessonStatus = helper.Content.Statuses.RegisterStatus("Lesson", new StatusConfiguration
-        {
-            Definition = new StatusDef
-            {
-                isGood = true,
-                affectedByTimestop = false,
-                color = new Color("c7dcd0"),
-                icon = RegisterSprite(package, "assets/lesson.png").Sprite
-            },
-            Name = AnyLocalizations.Bind(["status", "lesson", "name"]).Localize,
-            Description = AnyLocalizations.Bind(["status", "lesson", "desc"]).Localize
-        });
-
-        /*
-         * Managers are typically made to register themselves when constructed.
-         * _ = makes the compiler not complain about the fact that you are constructing something for seemingly no reason.
-         
-        _ = new KnowledgeManager(package, helper);
-        _ = new SilentStatusManager();*/
-
     }
 
-    /*
-     * assets must also be registered before they may be used.
-     * Unlike cards and artifacts, however, they are very simple to register, and often do not need to be referenced in more than one place.
-     * This utility method exists to easily register a sprite, but nothing prevents you from calling the method used yourself.
-     */
+    //Setup method for easy sprite registration
     public static ISpriteEntry RegisterSprite(IPluginPackage<IModManifest> package, string dir)
     {
         return Instance.Helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile(dir));
     }
 
-    /*
-     * Animation frames are typically named very similarly, only differing by the number of the frame itself.
-     * This utility method exists to easily register an animation.
-     * It expects the animation to start at frame 0, up to frames - 1.
-     * TODO It is advised to avoid animations consisting of 2 or 3 frames.
-     */
+    //Setup method for easy animation registration
     public static void RegisterAnimation(IPluginPackage<IModManifest> package, string tag, string dir, int frames)
     {
         Instance.Helper.Content.Characters.V2.RegisterCharacterAnimation(new CharacterAnimationConfigurationV2

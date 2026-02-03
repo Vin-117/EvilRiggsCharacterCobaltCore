@@ -7,3 +7,13 @@ C:\Users\conce\Desktop\Cobalt Core Mods\Mine\Evil_Riggs\obj\Release\net8.0\Evil_
 C:\Users\conce\Desktop\Cobalt Core Mods\Mine\Evil_Riggs\obj\Release\net8.0\Evil_Riggs.AssemblyInfo.cs
 C:\Users\conce\Desktop\Cobalt Core Mods\Mine\Evil_Riggs\obj\Release\net8.0\Evil_Riggs.csproj.CoreCompileInputs.cache
 C:\Users\conce\Desktop\Cobalt Core Mods\Mine\Evil_Riggs\obj\Release\net8.0\Evil_Riggs.dll
+C:\Users\conce\OneDrive\Desktop\Misc Folders\Cobalt Core Mods\Mine\EvilRiggs\bin\Release\net8.0\Evil_Riggs.dll.config
+C:\Users\conce\OneDrive\Desktop\Misc Folders\Cobalt Core Mods\Mine\EvilRiggs\bin\Release\net8.0\Evil_Riggs.deps.json
+C:\Users\conce\OneDrive\Desktop\Misc Folders\Cobalt Core Mods\Mine\EvilRiggs\bin\Release\net8.0\Evil_Riggs.dll
+C:\Users\conce\OneDrive\Desktop\Misc Folders\Cobalt Core Mods\Mine\EvilRiggs\obj\Release\net8.0\Evil_Riggs.csproj.AssemblyReference.cache
+C:\Users\conce\OneDrive\Desktop\Misc Folders\Cobalt Core Mods\Mine\EvilRiggs\obj\Release\net8.0\Evil_Riggs.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\conce\OneDrive\Desktop\Misc Folders\Cobalt Core Mods\Mine\EvilRiggs\obj\Release\net8.0\Evil_Riggs.AssemblyInfoInputs.cache
+C:\Users\conce\OneDrive\Desktop\Misc Folders\Cobalt Core Mods\Mine\EvilRiggs\obj\Release\net8.0\Evil_Riggs.AssemblyInfo.cs
+C:\Users\conce\OneDrive\Desktop\Misc Folders\Cobalt Core Mods\Mine\EvilRiggs\obj\Release\net8.0\Evil_Riggs.csproj.CoreCompileInputs.cache
+C:\Users\conce\OneDrive\Desktop\Misc Folders\Cobalt Core Mods\Mine\EvilRiggs\obj\Release\net8.0\Evil_Riggs.sourcelink.json
+C:\Users\conce\OneDrive\Desktop\Misc Folders\Cobalt Core Mods\Mine\EvilRiggs\obj\Release\net8.0\Evil_Riggs.dll
