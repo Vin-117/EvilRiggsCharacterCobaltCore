@@ -9,6 +9,7 @@ using System.Linq;
 using Evil_Riggs.External;
 using Evil_Riggs.Cards;
 using Evil_Riggs.Midrow;
+using Evil_Riggs.Actions;
 
 namespace Evil_Riggs;
 
@@ -30,7 +31,8 @@ internal class ModEntry : SimpleMod
     // Register cards
     private static List<Type> Evil_RiggsCommonCardTypes =
     [
-        typeof(LightMissileCard)
+        typeof(LightMissileCard),
+        typeof(Skedaddle)
     ];
     private static List<Type> Evil_RiggsUncommonCardTypes =
     [
@@ -68,6 +70,10 @@ internal class ModEntry : SimpleMod
     internal ISpriteEntry LightMissileMidrowIcon { get; }
     internal ISpriteEntry LightMissileActionIcon { get; }
 
+    //Register Sequential trait and icon
+    internal ICardTraitEntry SequentialTrait;
+    internal ISpriteEntry SequentialIcon;
+
 
     //Setup modentry
     public ModEntry(IPluginPackage<IModManifest> package, IModHelper helper, ILogger logger) : base(package, helper, logger)
@@ -91,6 +97,7 @@ internal class ModEntry : SimpleMod
         //Define all custom sprites
         LightMissileMidrowIcon = helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/midrow/missile_mini.png"));
         LightMissileActionIcon = helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/midrow/icon_missile_light.png"));
+        SequentialIcon = helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/CardTrait/icon_sequential.png"));
 
         //Define deck
         Evil_RiggsDeck = helper.Content.Decks.RegisterDeck("Evil_Riggs", new DeckConfiguration
@@ -103,6 +110,22 @@ internal class ModEntry : SimpleMod
             DefaultCardArt = StableSpr.cards_colorless,
             BorderSprite = RegisterSprite(package, "assets/Card/evilRiggs_cardframe.png").Sprite,
             Name = AnyLocalizations.Bind(["character", "name"]).Localize
+        });
+
+        //Define sequential trait
+        SequentialTrait = helper.Content.Cards.RegisterTrait("Symbiotic", new()
+        {
+            Name = this.AnyLocalizations.Bind(["trait", "Sequential", "name"]).Localize,
+            Icon = (state, card) => SequentialIcon.Sprite,
+            Tooltips = (state, card) => [
+                new GlossaryTooltip($"trait.{Instance.Package.Manifest.UniqueName}::Sequential")
+                {
+                    Icon = SequentialIcon.Sprite,
+                    TitleColor = Colors.cardtrait,
+                    Title = Localizations.Localize(["trait", "Sequential", "name"]),
+                    Description = Localizations.Localize(["trait", "Sequential", "desc"])
+                },
+            ]
         });
 
         //Invoke all lists packaged with the helper
@@ -136,7 +159,8 @@ internal class ModEntry : SimpleMod
             {
                 cards = 
                 [
-                    new LightMissileCard()
+                    new LightMissileCard(),
+                    new Skedaddle()
                 ],
             },
             Description = AnyLocalizations.Bind(["character", "desc"]).Localize

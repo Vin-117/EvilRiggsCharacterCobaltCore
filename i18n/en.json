@@ -13,6 +13,24 @@
             "desc": "Increase the limit of <c=status>KNOWLEDGE</c> by {0}."
         }
     },
+
+
+
+
+    "trait": {
+        "Sequential": {
+            "name": "Sequential",
+            "desc": "Triggers the top set of actions when first played this turn, and the bottom set of actions on all subsequent plays this turn."
+        },
+    },
+
+
+
+
+
+
+
+
     "action": {
         "AGainPonder": {
             "title": "Gain Ponder",
@@ -30,6 +48,9 @@
         },
         "LightMissile": {
             "name": "Light Missile"
+        },
+        "Skedaddle": {
+            "name": "Skedaddle"
         },
         
         "DeepStudy": {
