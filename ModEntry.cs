@@ -1,15 +1,17 @@
-﻿using HarmonyLib;
+﻿using Evil_Riggs.Actions;
+using Evil_Riggs.Cards;
+using Evil_Riggs.External;
+using Evil_Riggs.Features;
+using Evil_Riggs.Midrow;
+using HarmonyLib;
 using Microsoft.Extensions.Logging;
+using Microsoft.Win32;
 using Nanoray.PluginManager;
 using Nickel;
 using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
-using Evil_Riggs.External;
-using Evil_Riggs.Cards;
-using Evil_Riggs.Midrow;
-using Evil_Riggs.Actions;
 
 namespace Evil_Riggs;
 
@@ -28,11 +30,18 @@ internal class ModEntry : SimpleMod
     //Register deck
     internal IDeckEntry Evil_RiggsDeck;
 
+    //Register status variables
+    internal IStatusEntry EvilRiggsRage;
+
     // Register cards
     private static List<Type> Evil_RiggsCommonCardTypes =
     [
         typeof(LightMissileCard),
-        typeof(Skedaddle)
+        typeof(Skedaddle),
+        typeof(Jostle),
+        typeof(WildShot),
+        typeof(Airburst),
+        typeof(Bide)
     ];
     private static List<Type> Evil_RiggsUncommonCardTypes =
     [
@@ -128,6 +137,21 @@ internal class ModEntry : SimpleMod
             ]
         });
 
+        //Define statuses
+        EvilRiggsRage = helper.Content.Statuses.RegisterStatus("EvilRiggsRageStatus", new StatusConfiguration
+        {
+            Definition = new StatusDef
+            {
+                isGood = true,
+                affectedByTimestop = false,
+                color = new Color("ff9c5f"),
+                icon = RegisterSprite(package, "assets/Status/evilRiggs_status_rage.png").Sprite
+            },
+            Name = AnyLocalizations.Bind(["status", "EvilRiggsRageStatus", "name"]).Localize,
+            Description = AnyLocalizations.Bind(["status", "EvilRiggsRageStatus", "desc"]).Localize
+        });
+        _ = new EvilRiggsRageManager();
+
         //Invoke all lists packaged with the helper
         foreach (var type in AllRegisterableTypes)
             AccessTools.DeclaredMethod(type, nameof(IRegisterable.Register))?.Invoke(null, [package, helper]);
@@ -160,7 +184,8 @@ internal class ModEntry : SimpleMod
                 cards = 
                 [
                     new LightMissileCard(),
-                    new Skedaddle()
+                    new Skedaddle(),
+                    new Bide()  
                 ],
             },
             Description = AnyLocalizations.Bind(["character", "desc"]).Localize
