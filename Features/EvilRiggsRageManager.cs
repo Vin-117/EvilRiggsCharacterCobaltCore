@@ -23,40 +23,54 @@ public class EvilRiggsRageManager : IKokoroApi.IV2.IStatusLogicApi.IHook, IKokor
         ModEntry.Instance.KokoroApi.StatusRendering.RegisterHook(this, 0);
     }
 
+    private static Status Evil_Rage => ModEntry.Instance.EvilRiggsRage.Status;
+
+
     public IReadOnlyList<Tooltip> OverrideStatusTooltips(IKokoroApi.IV2.IStatusRenderingApi.IHook.IOverrideStatusTooltipsArgs args)
         => args.Status == ModEntry.Instance.EvilRiggsRage.Status
             ?[
                 .. args.Tooltips,
                 new TTCard { card = new EvilRiggsCard() }
             ] : args.Tooltips;
-        
 
-    public bool HandleStatusTurnAutoStep(IHandleStatusTurnAutoStepArgs args)
+
+    public int ModifyStatusChange(IModifyStatusChangeArgs args) 
     {
-
-        if (args.Status != ModEntry.Instance.EvilRiggsRage.Status)
-            return false;
-        //if (args.Timing.)
-        if (args.Amount >= 7)
+        //Check if the status is the Rage status
+        if (args.Status == ModEntry.Instance.EvilRiggsRage.Status)
         {
-            args.Combat.QueueImmediate(
+
+            //if it is, check if its equal to or over 7
+            
+            //if (args.Ship.Get(ModEntry.Instance.EvilRiggsRage.Status) >= 7)
+            if (args.NewAmount >= 7)
+            {
+                //if it is equal to or over 7, give the missile swarm card
+                //and set it to 0
+                args.Combat.QueueImmediate(
                 new AAddCard()
                 {
                     card = new EvilRiggsCard()
                     {
+                        temporaryOverride = true,
+                        exhaustOverride = true
                     },
                     destination = CardDestination.Hand,
                     amount = 1,
                 });
-            args.Combat.Queue(
-                new AStatus() 
-                {
-                    status = ModEntry.Instance.EvilRiggsRage.Status,
-                    statusAmount = -1*args.Amount,
-                    targetPlayer = true
-                });
+                return 0;
+            }
+            else 
+            {
+                //the rage status is not over or equal to 7, so do nothing
+                return args.NewAmount;
+            }
         }
-        return false;
+        else 
+        {
+            //if not the rage status, do nothing
+            return args.NewAmount;
+        }
     }
 }
 

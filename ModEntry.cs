@@ -1,4 +1,5 @@
 ﻿using Evil_Riggs.Actions;
+using Evil_Riggs.CardActions;
 using Evil_Riggs.Cards;
 using Evil_Riggs.External;
 using Evil_Riggs.Features;
@@ -41,7 +42,10 @@ internal class ModEntry : SimpleMod
         typeof(Jostle),
         typeof(WildShot),
         typeof(Airburst),
-        typeof(Bide)
+        typeof(Bide),
+        typeof(Scheme),
+        typeof(JammedBarrel),
+        typeof(FireAtWill)
     ];
     private static List<Type> Evil_RiggsUncommonCardTypes =
     [
@@ -79,6 +83,8 @@ internal class ModEntry : SimpleMod
     internal ISpriteEntry LightMissileMidrowIcon { get; }
     internal ISpriteEntry LightMissileActionIcon { get; }
 
+    //internal ISpriteEntry MissileTurnActionIcon { get; }
+
     //Register Sequential trait and icon
     internal ICardTraitEntry SequentialTrait;
     internal ISpriteEntry SequentialIcon;
@@ -107,6 +113,9 @@ internal class ModEntry : SimpleMod
         LightMissileMidrowIcon = helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/midrow/missile_mini.png"));
         LightMissileActionIcon = helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/midrow/icon_missile_light.png"));
         SequentialIcon = helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/CardTrait/icon_sequential.png"));
+        AMissileTurn.AMissileTurnSpr = RegisterSprite(package, "assets/Action/evilRiggs_status_missileTurn.png").Sprite;
+
+
 
         //Define deck
         Evil_RiggsDeck = helper.Content.Decks.RegisterDeck("Evil_Riggs", new DeckConfiguration
@@ -185,7 +194,7 @@ internal class ModEntry : SimpleMod
                 [
                     new LightMissileCard(),
                     new Skedaddle(),
-                    new Bide()  
+                    new FireAtWill()    
                 ],
             },
             Description = AnyLocalizations.Bind(["character", "desc"]).Localize

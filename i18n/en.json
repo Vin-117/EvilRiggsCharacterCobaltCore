@@ -36,6 +36,10 @@
             "title": "Midrow Move Random",
             "desc": "Instantly move all <c=midrow>midrow objects</c> <c=boldPink>{{cnt}}</c> spaces in a random direction."
         },
+        "AMissileTurn": {
+            "title": "Missile Turn",
+            "desc": "All <c=midrow>missiles</c> instantly take a turn."
+        },
     },
     "card": {
         "LightMissile": {
@@ -55,6 +59,15 @@
         },
         "Bide": {
             "name": "Bide"
+        },
+        "Scheme": {
+            "name": "Scheme"
+        },
+        "JammedBarrel": {
+            "name": "Jammed Barrel"
+        },
+        "FireAtWill": {
+            "name": "Fire At Will"
         },
     },
     "artifact": {
