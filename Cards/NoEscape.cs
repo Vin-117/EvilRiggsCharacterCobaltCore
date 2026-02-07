@@ -10,16 +10,8 @@ namespace Evil_Riggs.Cards;
 
 public class NoEscape : Card, IRegisterable
 {
-
-    //private static ISpriteEntry DoubleMissileArt = null!;
-    //private static ISpriteEntry SingleMissileArt = null!;
-
     public static void Register(IPluginPackage<IModManifest> package, IModHelper helper)
     {
-
-        //DoubleMissileArt = helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/Card/VicSeekerSwarm.png"));
-        //SingleMissileArt = helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/Card/VicbasicMissile.png"));
-
         helper.Content.Cards.RegisterCard(new CardConfiguration
         {
             CardType = MethodBase.GetCurrentMethod()!.DeclaringType!,
@@ -31,7 +23,7 @@ public class NoEscape : Card, IRegisterable
                 upgradesTo = [Upgrade.A, Upgrade.B]
             },
             Name = ModEntry.Instance.AnyLocalizations.Bind(["card", "NoEscape", "name"]).Localize,
-            //Art = helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/Card/VicbasicMissile.png")).Sprite,
+            Art = StableSpr.cards_HeatSink
         });
     }
 
@@ -163,7 +155,6 @@ public class NoEscape : Card, IRegisterable
                 {
                     return new List<CardAction>
                     {
-                       
                     };
                 }
         }

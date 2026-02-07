@@ -10,16 +10,8 @@ namespace Evil_Riggs.Cards;
 
 public class Bide : Card, IRegisterable
 {
-
-    //private static ISpriteEntry DoubleMissileArt = null!;
-    //private static ISpriteEntry SingleMissileArt = null!;
-
     public static void Register(IPluginPackage<IModManifest> package, IModHelper helper)
     {
-
-        //DoubleMissileArt = helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/Card/VicSeekerSwarm.png"));
-        //SingleMissileArt = helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/Card/VicbasicMissile.png"));
-
         helper.Content.Cards.RegisterCard(new CardConfiguration
         {
             CardType = MethodBase.GetCurrentMethod()!.DeclaringType!,
@@ -31,43 +23,16 @@ public class Bide : Card, IRegisterable
                 upgradesTo = [Upgrade.A, Upgrade.B]
             },
             Name = ModEntry.Instance.AnyLocalizations.Bind(["card", "Bide", "name"]).Localize,
-            //Art = helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/Card/VicbasicMissile.png")).Sprite,
+            Art = StableSpr.cards_Heatwave
         });
     }
 
     public override CardData GetData(State state)
     {
-        switch(this.upgrade)
+        return new CardData
         {
-            case Upgrade.None: 
-                {
-                    return new CardData
-                    {
-                        cost = 1
-                    };
-                }
-            case Upgrade.A:
-                {
-                    return new CardData
-                    {
-                        cost = 1
-                    };
-                }
-            case Upgrade.B:
-                {
-                    return new CardData
-                    {
-                        cost = 1
-                    };
-                }
-            default:
-                {
-                    return new CardData
-                    {
-                        cost = 1
-                    };
-                }
-        }
+            cost = 1
+        };
     }
 
     public override List<CardAction> GetActions(State s, Combat c)
@@ -118,7 +83,6 @@ public class Bide : Card, IRegisterable
                 {
                     return new List<CardAction>
                     {
-                       
                     };
                 }
         }

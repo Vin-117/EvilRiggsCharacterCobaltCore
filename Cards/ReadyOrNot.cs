@@ -11,16 +11,8 @@ namespace Evil_Riggs.Cards;
 
 public class ReadyOrNot : Card, IRegisterable
 {
-
-    //private static ISpriteEntry DoubleMissileArt = null!;
-    //private static ISpriteEntry SingleMissileArt = null!;
-
     public static void Register(IPluginPackage<IModManifest> package, IModHelper helper)
     {
-
-        //DoubleMissileArt = helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/Card/VicSeekerSwarm.png"));
-        //SingleMissileArt = helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/Card/VicbasicMissile.png"));
-
         helper.Content.Cards.RegisterCard(new CardConfiguration
         {
             CardType = MethodBase.GetCurrentMethod()!.DeclaringType!,
@@ -32,46 +24,17 @@ public class ReadyOrNot : Card, IRegisterable
                 upgradesTo = [Upgrade.A, Upgrade.B]
             },
             Name = ModEntry.Instance.AnyLocalizations.Bind(["card", "ReadyOrNot", "name"]).Localize,
-            //Art = helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/Card/VicbasicMissile.png")).Sprite,
+            Art = StableSpr.cards_Prepare
         });
     }
 
     public override CardData GetData(State state)
     {
-        switch(this.upgrade)
+        return new CardData
         {
-            case Upgrade.None: 
-                {
-                    return new CardData
-                    {
-                        cost = 1,
-                        infinite = true
-                    };
-                }
-            case Upgrade.A:
-                {
-                    return new CardData
-                    {
-                        cost = 1,
-                        infinite = true
-                    };
-                }
-            case Upgrade.B:
-                {
-                    return new CardData
-                    {
-                        cost = 1,
-                        infinite = true
-                    };
-                }
-            default:
-                {
-                    return new CardData
-                    {
-                        cost = 0
-                    };
-                }
-        }
+            cost = 1,
+            infinite = true
+        };
     }
 
     public override List<CardAction> GetActions(State s, Combat c)
@@ -82,7 +45,6 @@ public class ReadyOrNot : Card, IRegisterable
                 {
                     return new List<CardAction>
                     {
-
                         new AStatus
                         {
                             status = Status.drawNextTurn,
@@ -143,7 +105,6 @@ public class ReadyOrNot : Card, IRegisterable
                 {
                     return new List<CardAction>
                     {
-                       
                     };
                 }
         }
