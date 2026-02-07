@@ -8,10 +8,26 @@
             "name": "Rage",
             "desc": "When this status reaches <c=boldPink>7</c> or higher, set it to 0 and add a Missile Swarm to your hand."
         },
-        "lesson": {
-            "name": "Lesson",
-            "desc": "Increase the limit of <c=status>KNOWLEDGE</c> by {0}."
-        }
+        "EvilRiggsDiscountNextTurn": {
+            "name": "Discount Next Turn",
+            "desc": "At the start of your next turn, the leftmost <c=boldPink>{0}</c> cards in your hand are discounted by 1 <c=status>ENERGY</c>."
+        },
+        "EvilRiggsRocketFactory": {
+            "name": "Rocket Factory",
+            "desc": "Launch <c=boldPink>{0}</c> <c=midrow>missiles</c> at the start of every turn."
+        },
+        "EvilRiggsBarrelRoll": {
+            "name": "Barrel Roll",
+            "desc": "At the start of every turn, move <c=boldPink>{0}</c> spaces in a random direction."
+        },
+        "EvilRiggsEngineRedirect": {
+            "name": "Engine Redirect",
+            "desc": "The first <c=boldPink>{0}</c> times you move every turn, draw 1 card."
+        },
+        "EvilRiggsEngineRedirectCounter": {
+            "name": "Engine Redirect Count",
+            "desc": "<c=boldPink>{0}</c> cards have been drawn with <c=status>Engine Redirect</c> this turn."
+        },
     },
 
 
@@ -39,6 +55,10 @@
         "AMissileTurn": {
             "title": "Missile Turn",
             "desc": "All <c=midrow>missiles</c> instantly take a turn."
+        },
+        "ATargetLock": {
+            "title": "Target Lock",
+            "desc": "Instantly turn every <c=midrow>missile in the midrow</c> into <c=midrow>seekers</c>."
         },
     },
     "card": {
@@ -68,6 +88,42 @@
         },
         "FireAtWill": {
             "name": "Fire At Will"
+        },
+        "AllTheButtons": {
+            "name": "All The Buttons"
+        },
+        "Brilliance": {
+            "name": "Brilliance"
+        },
+        "BurstFire": {
+            "name": "Burst Fire"
+        },
+        "Swerve": {
+            "name": "Swerve"
+        },
+        "SteamEngine": {
+            "name": "Steam Engine"
+        },
+        "TargetLock": {
+            "name": "Target Lock"
+        },
+        "ReadyOrNot": {
+            "name": "Ready Or Not"
+        },
+        "RiggsFinaleCard": {
+            "name": "Finale"
+        },
+        "NoEscape": {
+            "name": "No Escape"
+        },
+        "Rocket Factory": {
+            "name": "Rocket Factory"
+        },
+        "DoABarrelRoll": {
+            "name": "Do A Barrel Roll"
+        },
+        "EngineRedirect": {
+            "name": "Engine Redirect"
         },
     },
     "artifact": {

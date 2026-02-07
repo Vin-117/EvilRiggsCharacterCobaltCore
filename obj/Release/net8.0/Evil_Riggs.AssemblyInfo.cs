@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Evil_Riggs")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("0.2.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.2.0+cee78baf2c15c7d33a4f7ddd0de352e416250680")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.2.0+e409a54c62f064bd1b54d352d9251c6399404f5e")]
 [assembly: System.Reflection.AssemblyProductAttribute("Evil_Riggs")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Evil_Riggs")]
 [assembly: System.Reflection.AssemblyVersionAttribute("0.2.0.0")]

@@ -3,30 +3,19 @@
   "WorkspaceRootPath": "C:\\Users\\conce\\OneDrive\\Desktop\\Misc Folders\\Cobalt Core Mods\\Mine\\EvilRiggs\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4507AB42-F55D-C708-071E-8DEF511A334A}|Evil_Riggs.csproj|c:\\users\\conce\\onedrive\\desktop\\misc folders\\cobalt core mods\\mine\\evilriggs\\i18n\\en.json||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{4507AB42-F55D-C708-071E-8DEF511A334A}|Evil_Riggs.csproj|solutionrelative:i18n\\en.json||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4507AB42-F55D-C708-071E-8DEF511A334A}|Evil_Riggs.csproj|c:\\users\\conce\\onedrive\\desktop\\misc folders\\cobalt core mods\\mine\\evilriggs\\modentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4507AB42-F55D-C708-071E-8DEF511A334A}|Evil_Riggs.csproj|solutionrelative:modentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4507AB42-F55D-C708-071E-8DEF511A334A}|Evil_Riggs.csproj|c:\\users\\conce\\onedrive\\desktop\\misc folders\\cobalt core mods\\mine\\evilriggs\\actions\\amissileturn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4507AB42-F55D-C708-071E-8DEF511A334A}|Evil_Riggs.csproj|solutionrelative:actions\\amissileturn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\conce\\OneDrive\\Desktop\\Misc Folders\\Cobalt Core Mods\\Mine\\LEGACY EvilRiggs\\Manifest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\conce\\OneDrive\\Desktop\\Misc Folders\\Cobalt Core Mods\\Mine\\zariMod\\Actions\\ADiscardFlexSelect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4507AB42-F55D-C708-071E-8DEF511A334A}|Evil_Riggs.csproj|c:\\users\\conce\\onedrive\\desktop\\misc folders\\cobalt core mods\\mine\\evilriggs\\i18n\\en.json||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{4507AB42-F55D-C708-071E-8DEF511A334A}|Evil_Riggs.csproj|solutionrelative:i18n\\en.json||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\conce\\OneDrive\\Desktop\\Misc Folders\\Cobalt Core Mods\\Mine\\zariMod\\ModEntry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4507AB42-F55D-C708-071E-8DEF511A334A}|Evil_Riggs.csproj|c:\\users\\conce\\onedrive\\desktop\\misc folders\\cobalt core mods\\mine\\evilriggs\\actions\\adronerandommove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4507AB42-F55D-C708-071E-8DEF511A334A}|Evil_Riggs.csproj|solutionrelative:actions\\adronerandommove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4507AB42-F55D-C708-071E-8DEF511A334A}|Evil_Riggs.csproj|c:\\users\\conce\\onedrive\\desktop\\misc folders\\cobalt core mods\\mine\\evilriggs\\cards\\fireatwill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4507AB42-F55D-C708-071E-8DEF511A334A}|Evil_Riggs.csproj|solutionrelative:cards\\fireatwill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4507AB42-F55D-C708-071E-8DEF511A334A}|Evil_Riggs.csproj|c:\\users\\conce\\onedrive\\desktop\\misc folders\\cobalt core mods\\mine\\evilriggs\\features\\evilriggsengineredirectmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4507AB42-F55D-C708-071E-8DEF511A334A}|Evil_Riggs.csproj|solutionrelative:features\\evilriggsengineredirectmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -36,7 +25,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -56,93 +45,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ModEntry.cs",
-              "DocumentMoniker": "C:\\Users\\conce\\OneDrive\\Desktop\\Misc Folders\\Cobalt Core Mods\\Mine\\zariMod\\ModEntry.cs",
-              "RelativeDocumentMoniker": "..\\zariMod\\ModEntry.cs",
-              "ToolTip": "C:\\Users\\conce\\OneDrive\\Desktop\\Misc Folders\\Cobalt Core Mods\\Mine\\zariMod\\ModEntry.cs",
-              "RelativeToolTip": "..\\zariMod\\ModEntry.cs",
-              "ViewState": "AgIAAHsAAAAAAAAAAAAUwC4BAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-06T01:40:10.457Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ADiscardFlexSelect.cs",
-              "DocumentMoniker": "C:\\Users\\conce\\OneDrive\\Desktop\\Misc Folders\\Cobalt Core Mods\\Mine\\zariMod\\Actions\\ADiscardFlexSelect.cs",
-              "RelativeDocumentMoniker": "..\\zariMod\\Actions\\ADiscardFlexSelect.cs",
-              "ToolTip": "C:\\Users\\conce\\OneDrive\\Desktop\\Misc Folders\\Cobalt Core Mods\\Mine\\zariMod\\Actions\\ADiscardFlexSelect.cs",
-              "RelativeToolTip": "..\\zariMod\\Actions\\ADiscardFlexSelect.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAUwBUAAAArAAAAAAAAAA==",
+              "Title": "EvilRiggsEngineRedirectManager.cs",
+              "DocumentMoniker": "C:\\Users\\conce\\OneDrive\\Desktop\\Misc Folders\\Cobalt Core Mods\\Mine\\EvilRiggs\\Features\\EvilRiggsEngineRedirectManager.cs",
+              "RelativeDocumentMoniker": "Features\\EvilRiggsEngineRedirectManager.cs",
+              "ToolTip": "C:\\Users\\conce\\OneDrive\\Desktop\\Misc Folders\\Cobalt Core Mods\\Mine\\EvilRiggs\\Features\\EvilRiggsEngineRedirectManager.cs",
+              "RelativeToolTip": "Features\\EvilRiggsEngineRedirectManager.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACYAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-06T01:29:51.431Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ADroneRandomMove.cs",
-              "DocumentMoniker": "C:\\Users\\conce\\OneDrive\\Desktop\\Misc Folders\\Cobalt Core Mods\\Mine\\EvilRiggs\\Actions\\ADroneRandomMove.cs",
-              "RelativeDocumentMoniker": "Actions\\ADroneRandomMove.cs",
-              "ToolTip": "C:\\Users\\conce\\OneDrive\\Desktop\\Misc Folders\\Cobalt Core Mods\\Mine\\EvilRiggs\\Actions\\ADroneRandomMove.cs",
-              "RelativeToolTip": "Actions\\ADroneRandomMove.cs",
-              "ViewState": "AgIAAFQAAAAAAAAAAAAYwG4AAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-06T01:25:13.954Z",
+              "WhenOpened": "2026-02-07T19:34:33.739Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "AMissileTurn.cs",
-              "DocumentMoniker": "C:\\Users\\conce\\OneDrive\\Desktop\\Misc Folders\\Cobalt Core Mods\\Mine\\EvilRiggs\\Actions\\AMissileTurn.cs",
-              "RelativeDocumentMoniker": "Actions\\AMissileTurn.cs",
-              "ToolTip": "C:\\Users\\conce\\OneDrive\\Desktop\\Misc Folders\\Cobalt Core Mods\\Mine\\EvilRiggs\\Actions\\AMissileTurn.cs",
-              "RelativeToolTip": "Actions\\AMissileTurn.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-06T01:24:52.901Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "FireAtWill.cs",
-              "DocumentMoniker": "C:\\Users\\conce\\OneDrive\\Desktop\\Misc Folders\\Cobalt Core Mods\\Mine\\EvilRiggs\\Cards\\FireAtWill.cs",
-              "RelativeDocumentMoniker": "Cards\\FireAtWill.cs",
-              "ToolTip": "C:\\Users\\conce\\OneDrive\\Desktop\\Misc Folders\\Cobalt Core Mods\\Mine\\EvilRiggs\\Cards\\FireAtWill.cs",
-              "RelativeToolTip": "Cards\\FireAtWill.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAYwAsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-06T01:17:04.938Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "en.json",
               "DocumentMoniker": "C:\\Users\\conce\\OneDrive\\Desktop\\Misc Folders\\Cobalt Core Mods\\Mine\\EvilRiggs\\i18n\\en.json",
               "RelativeDocumentMoniker": "i18n\\en.json",
               "ToolTip": "C:\\Users\\conce\\OneDrive\\Desktop\\Misc Folders\\Cobalt Core Mods\\Mine\\EvilRiggs\\i18n\\en.json",
               "RelativeToolTip": "i18n\\en.json",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAACgAAABAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAABsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-02-06T01:05:15.114Z",
+              "WhenOpened": "2026-02-07T16:23:25.477Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Manifest.cs",
+              "DocumentMoniker": "C:\\Users\\conce\\OneDrive\\Desktop\\Misc Folders\\Cobalt Core Mods\\Mine\\LEGACY EvilRiggs\\Manifest.cs",
+              "RelativeDocumentMoniker": "..\\LEGACY EvilRiggs\\Manifest.cs",
+              "ToolTip": "C:\\Users\\conce\\OneDrive\\Desktop\\Misc Folders\\Cobalt Core Mods\\Mine\\LEGACY EvilRiggs\\Manifest.cs",
+              "RelativeToolTip": "..\\LEGACY EvilRiggs\\Manifest.cs",
+              "ViewState": "AgIAACABAAAAAAAAAADwvysBAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-07T19:53:16.354Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "ModEntry.cs",
               "DocumentMoniker": "C:\\Users\\conce\\OneDrive\\Desktop\\Misc Folders\\Cobalt Core Mods\\Mine\\EvilRiggs\\ModEntry.cs",
               "RelativeDocumentMoniker": "ModEntry.cs",
-              "ToolTip": "C:\\Users\\conce\\OneDrive\\Desktop\\Misc Folders\\Cobalt Core Mods\\Mine\\EvilRiggs\\ModEntry.cs",
-              "RelativeToolTip": "ModEntry.cs",
-              "ViewState": "AgIAAGIAAAAAAAAAAAAwwHIAAACMAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\conce\\OneDrive\\Desktop\\Misc Folders\\Cobalt Core Mods\\Mine\\EvilRiggs\\ModEntry.cs*",
+              "RelativeToolTip": "ModEntry.cs*",
+              "ViewState": "AgIAAIcAAAAAAAAAAAAYwDQBAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-06T01:05:09.521Z",
+              "WhenOpened": "2026-02-07T16:23:20.789Z",
               "EditorCaption": ""
             }
           ]

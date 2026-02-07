@@ -33,6 +33,11 @@ internal class ModEntry : SimpleMod
 
     //Register status variables
     internal IStatusEntry EvilRiggsRage;
+    internal IStatusEntry EvilRiggsDiscountNextTurn;
+    internal IStatusEntry EvilRiggsRocketFactory;
+    internal IStatusEntry EvilRiggsBarrelRoll;
+    internal IStatusEntry EvilRiggsEngineRedirect;
+    internal IStatusEntry EvilRiggsEngineRedirectCounter;
 
     // Register cards
     private static List<Type> Evil_RiggsCommonCardTypes =
@@ -49,9 +54,21 @@ internal class ModEntry : SimpleMod
     ];
     private static List<Type> Evil_RiggsUncommonCardTypes =
     [
+        typeof(AllTheButtons),
+        typeof(Brilliance),
+        typeof(BurstFire),
+        typeof(Swerve),
+        typeof(SteamEngine),
+        typeof(TargetLock),
+        typeof(ReadyOrNot)
     ];
     private static List<Type> Evil_RiggsRareCardTypes = 
     [
+        typeof(RiggsFinaleCard),
+        typeof(NoEscape),
+        typeof(RocketFactory),
+        typeof(DoABarrelRoll),
+        typeof(EngineRedirect)
     ];
     private static List<Type> Evil_RiggsSpecialCardTypes = 
     [
@@ -114,7 +131,8 @@ internal class ModEntry : SimpleMod
         LightMissileActionIcon = helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/midrow/icon_missile_light.png"));
         SequentialIcon = helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/CardTrait/icon_sequential.png"));
         AMissileTurn.AMissileTurnSpr = RegisterSprite(package, "assets/Action/evilRiggs_status_missileTurn.png").Sprite;
-
+        ATargetLock.ATargetLockSpr = RegisterSprite(package, "assets/Action/evilRiggs_status_targetLock.png").Sprite;
+        ADiscountFirstCards.ADiscountFirstCardSpr = RegisterSprite(package, "assets/Action/evilRiggs_status_discount.png").Sprite;
 
 
         //Define deck
@@ -160,6 +178,81 @@ internal class ModEntry : SimpleMod
             Description = AnyLocalizations.Bind(["status", "EvilRiggsRageStatus", "desc"]).Localize
         });
         _ = new EvilRiggsRageManager();
+        EvilRiggsDiscountNextTurn = helper.Content.Statuses.RegisterStatus("EvilRiggsDiscountNextTurn", new StatusConfiguration
+        {
+            Definition = new StatusDef
+            {
+                isGood = true,
+                affectedByTimestop = false,
+                color = new Color("00478A"),
+                icon = RegisterSprite(package, "assets/Status/evilRiggs_status_discount.png").Sprite
+            },
+            Name = AnyLocalizations.Bind(["status", "EvilRiggsDiscountNextTurn", "name"]).Localize,
+            Description = AnyLocalizations.Bind(["status", "EvilRiggsDiscountNextTurn", "desc"]).Localize
+        });
+        _ = new EvilRiggsDiscountNextTurnManager();
+
+        EvilRiggsRocketFactory = helper.Content.Statuses.RegisterStatus("EvilRiggsRocketFactory", new StatusConfiguration
+        {
+            Definition = new StatusDef
+            {
+                isGood = true,
+                affectedByTimestop = false,
+                color = new Color("AEAEAE"),
+                icon = RegisterSprite(package, "assets/Status/evilRiggs_status_rocketFactory.png").Sprite
+            },
+            Name = AnyLocalizations.Bind(["status", "EvilRiggsRocketFactory", "name"]).Localize,
+            Description = AnyLocalizations.Bind(["status", "EvilRiggsRocketFactory", "desc"]).Localize
+        });
+        _ = new EvilRiggsRocketFactoryManager();
+
+        EvilRiggsBarrelRoll = helper.Content.Statuses.RegisterStatus("EvilRiggsBarrelRoll", new StatusConfiguration
+        {
+            Definition = new StatusDef
+            {
+                isGood = true,
+                affectedByTimestop = false,
+                color = new Color("AEAEAE"),
+                icon = RegisterSprite(package, "assets/Status/evilRiggs_status_barrelRoll.png").Sprite
+            },
+            Name = AnyLocalizations.Bind(["status", "EvilRiggsBarrelRoll", "name"]).Localize,
+            Description = AnyLocalizations.Bind(["status", "EvilRiggsBarrelRoll", "desc"]).Localize
+        });
+        _ = new EvilRiggsBarrelRollManager();
+
+        EvilRiggsEngineRedirect = helper.Content.Statuses.RegisterStatus("EvilRiggsEngineRedirect", new StatusConfiguration
+        {
+            Definition = new StatusDef
+            {
+                isGood = true,
+                affectedByTimestop = false,
+                color = new Color("3FBFFF"),
+                icon = RegisterSprite(package, "assets/Status/evilRiggs_status_engineRedirect.png").Sprite
+            },
+            Name = AnyLocalizations.Bind(["status", "EvilRiggsEngineRedirect", "name"]).Localize,
+            Description = AnyLocalizations.Bind(["status", "EvilRiggsEngineRedirect", "desc"]).Localize
+        });
+        _ = new EvilRiggsEngineRedirectManager();
+
+        EvilRiggsEngineRedirectCounter = helper.Content.Statuses.RegisterStatus("EvilRiggsEngineRedirectCounter", new StatusConfiguration
+        {
+            Definition = new StatusDef
+            {
+                isGood = false,
+                affectedByTimestop = false,
+                color = new Color("A0A0A0"),
+                icon = RegisterSprite(package, "assets/Status/evilRiggs_status_engineRedirectUsed.png").Sprite
+            },
+            Name = AnyLocalizations.Bind(["status", "EvilRiggsEngineRedirectCounter", "name"]).Localize,
+            Description = AnyLocalizations.Bind(["status", "EvilRiggsEngineRedirectCounter", "desc"]).Localize
+        });
+        _ = new EvilRiggsEngineRedirectCounterManager();
+
+
+        //Define a small patch for engine redirect
+        var engine_redirect_patch_target = typeof(AMove).GetMethod("Begin", AccessTools.all);
+        var engine_redirect_patch_insert = typeof(ModEntry).GetMethod("EvilRiggsEngineRedirectPatch", AccessTools.all);
+        Harmony.Patch(engine_redirect_patch_target, postfix: new HarmonyMethod(engine_redirect_patch_insert));
 
         //Invoke all lists packaged with the helper
         foreach (var type in AllRegisterableTypes)
@@ -194,11 +287,25 @@ internal class ModEntry : SimpleMod
                 [
                     new LightMissileCard(),
                     new Skedaddle(),
-                    new FireAtWill()    
+                    new EngineRedirect()
                 ],
             },
             Description = AnyLocalizations.Bind(["character", "desc"]).Localize
         });
+    }
+
+
+    //Setup patch for Engine Redirect
+    private static void EvilRiggsEngineRedirectPatch(G g, State s, Combat c, ref AMove __instance)
+    {
+        Status statusRedirect = ModEntry.Instance.EvilRiggsEngineRedirect.Status;
+        Status statusRedirectUsed = ModEntry.Instance.EvilRiggsEngineRedirectCounter.Status;
+        Ship ship = (__instance.targetPlayer ? s.ship : c.otherShip);
+        if (ship.Get(statusRedirect) > ship.Get(statusRedirectUsed))
+        {
+            c.QueueImmediate(new ADrawCard { count = 1 });
+            c.QueueImmediate(new AStatus { targetPlayer = true, status = statusRedirectUsed, statusAmount = 1 });
+        }
     }
 
     //Setup method for easy sprite registration
