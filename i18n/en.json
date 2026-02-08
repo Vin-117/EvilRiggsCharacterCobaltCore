@@ -1,7 +1,7 @@
 ﻿{
     "character": {
-        "name": "Riggs?",
-        "desc": ["<c=riggs>RIGGS?</c>", "Your pilot? Her cards are mostly <c=boldPink>card draw</c> and <c=boldPink>chaotic movement</c>, alongside <c=boldPink>missiles</c> and <c=boldPink>sequential actions</c>."], 
+        "name": "Evil Riggs",
+        "desc": ["<c=riggs>EVIL RIGGS</c>", "<c=riggs>Riggs's</c> alternate self. Her cards have a similar focus to <c=riggs>Riggs's</c>, but with more chaos and more missiles."], 
     },
     "status": {
         "EvilRiggsRageStatus": {
@@ -127,14 +127,26 @@
         },
     },
     "artifact": {
-        "BuriedKnowledge": {
-            "name": "BURIED KNOWLEDGE",
-            "desc": "At the start of combat, add 3 <c=card>Ponder</c>s to the discard pile."
+        "SpiltBoba": {
+            "name": "SPILT BOBA",
+            "desc": "The first time you are hit every turn, gain 1 <c=status>RAGE</c> <c=downside>and draw 1 less card next turn.</c>"
         },
-        "Lexicon": {
-            "name": "LEXICON",
-            "desc": "Whenever you gain a <c=card>Ponder</c> during combat, it is given the A or B upgrade, alternating."
-        }
+        "SwarmPreloader": {
+            "name": "SWARM PRELOADER",
+            "desc": "Missile Swarm now costs 0."
+        },
+        "TemperedRage": {
+            "name": "TEMPERED RAGE",
+            "desc": "If you have 4 or more <c=status>RAGE</c> at the start of your turn, draw 2 additional cards."
+        },
+        "DreadnaughtShielding": {
+            "name": "DREADNAUGHT SHIELDING",
+            "desc": "Every time you play an infinite card, gain 1 <c=status>TEMP SHIELD</c>."
+        },
+        "HoldThatThought": {
+            "name": "HOLD THAT THOUGHT",
+            "desc": "The first Infinite card you play each combat that costs more than 0 gains Retain until combat ends."
+        },
     },
     "midrow": {
         "LightMissile": {

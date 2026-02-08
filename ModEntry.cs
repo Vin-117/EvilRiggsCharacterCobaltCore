@@ -4,6 +4,7 @@ using Evil_Riggs.Cards;
 using Evil_Riggs.External;
 using Evil_Riggs.Features;
 using Evil_Riggs.Midrow;
+using Evil_Riggs.Artifacts;
 using HarmonyLib;
 using Microsoft.Extensions.Logging;
 using Microsoft.Win32;
@@ -84,6 +85,11 @@ internal class ModEntry : SimpleMod
     //Register artifacts
     private static List<Type> Evil_RiggsCommonArtifacts =
     [
+        typeof(SpiltBoba),
+        typeof(SwarmPreloader),
+        typeof(TemperedRage),
+        typeof(DreadnaughtShielding),
+        typeof(HoldThatThought)
     ];
     private static List<Type> Evil_RiggsBossArtifacts = 
     [

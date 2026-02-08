@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<RootNamespace>Evil_Riggs</RootNamespace>
-		<Version>0.2.0</Version>
+		<Version>1.9.1</Version>
 		<IncludedModProjectPaths>i18n;assets</IncludedModProjectPaths>
 
 		<TargetFramework>net8.0</TargetFramework>

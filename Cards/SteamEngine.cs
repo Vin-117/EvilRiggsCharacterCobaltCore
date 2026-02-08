@@ -8,7 +8,7 @@ using Evil_Riggs.Actions;
 namespace Evil_Riggs.Cards;
 
 
-public class SteamEngine : SequentialCard, IRegisterable, IHasCustomCardTraits//Card, IRegisterable
+public class SteamEngine : SequentialCard, IRegisterable, IHasCustomCardTraits
 {
 
     private static ISpriteEntry TopHalfArt = null!;
@@ -36,7 +36,6 @@ public class SteamEngine : SequentialCard, IRegisterable, IHasCustomCardTraits//
                 upgradesTo = [Upgrade.A, Upgrade.B]
             },
             Name = ModEntry.Instance.AnyLocalizations.Bind(["card", "SteamEngine", "name"]).Localize,
-            //Art = helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/Card/VicbasicMissile.png")).Sprite,
         });
     }
 
