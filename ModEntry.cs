@@ -86,13 +86,13 @@ internal class ModEntry : SimpleMod
     private static List<Type> Evil_RiggsCommonArtifacts =
     [
         typeof(SpiltBoba),
-        typeof(SwarmPreloader),
         typeof(TemperedRage),
-        typeof(DreadnaughtShielding),
-        typeof(HoldThatThought)
+        typeof(DreadnaughtShielding)
     ];
     private static List<Type> Evil_RiggsBossArtifacts = 
     [
+        typeof(HoldThatThought),
+        typeof(SwarmPreloader)
     ];
     private static IEnumerable<Type> Evil_RiggsArtifactTypes =
         Evil_RiggsCommonArtifacts

@@ -17,9 +17,9 @@ public class SwarmPreloader : Artifact, IRegisterable
             ArtifactType = MethodBase.GetCurrentMethod()!.DeclaringType!,
             Meta = new ArtifactMeta
             {
-                pools = [ArtifactPool.Common],
+                pools = [ArtifactPool.Boss],
                 owner = ModEntry.Instance.Evil_RiggsDeck.Deck,
-                unremovable = false
+                unremovable = true
             },
             Name = ModEntry.Instance.AnyLocalizations.Bind(["artifact", "SwarmPreloader", "name"]).Localize,
             Description = ModEntry.Instance.AnyLocalizations.Bind(["artifact", "SwarmPreloader", "desc"]).Localize,
